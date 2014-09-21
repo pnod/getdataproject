@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Code Book</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Code Book</h1>
+
+<p>The tidy dataset includes one observation (row) for each combination of subject
+and activity. There were 30 subjects and 6 activities, so there are a total of 180
+rows in the dataset.  </p>
+
+<p>Each of these variables (except &ldquo;Activity&rdquo; and &ldquo;Subject&rdquo;) represents the <em>mean</em> score of the variable in question. So, for example, for variables with &ldquo;std&rdquo; in the name, the value in the tidy dataset represents the mean of the standard deviations. Scores were normalized so that they range between -1 and 1. There are 66 measurement variables (i.e. excluding &ldquo;Activity&rdquo; and &ldquo;Subject&rdquo;) in the tidy dataset, and they are described below:  </p>
+
+<p><strong>Activity</strong><br/>
+The type of activity the subject was engaged in. There are six levels: laying, sitting, standing, walking, walking downstairs, walking upstairs  </p>
+
+<p><strong>Subject</strong><br/>
+The subject number. Ranges from 1-30  </p>
+
+<p><strong>TimeBodyAcc-mean-X</strong><br/>
+Mean body acceleration time domain signal in the X direction   </p>
+
+<p><strong>TimeBodyAcc-mean-Y</strong><br/>
+Mean body acceleration time domain signal in the Y direction   </p>
+
+<p><strong>TimeBodyAcc-mean-Z</strong><br/>
+Mean body acceleration time domain signal in the Z direction   </p>
+
+<p><strong>TimeGravityAcc-mean-X</strong><br/>
+Mean gravity acceleration time domain signal in the X direction   </p>
+
+<p><strong>TimeGravityAcc-mean-Y</strong><br/>
+Mean gravity acceleration time domain signal in the Y direction   </p>
+
+<p><strong>TimeGravityAcc-mean-Z</strong><br/>
+Mean gravity acceleration time domain signal in the Z direction   </p>
+
+<p><strong>TimeBodyAccJerk-mean-X</strong><br/>
+Mean body acceleration time domain jerk signal in the X direction   </p>
+
+<p><strong>TimeBodyAccJerk-mean-Y</strong><br/>
+Mean body acceleration time domain jerk signal in the Y direction   </p>
+
+<p><strong>TimeBodyAccJerk-mean-Z</strong><br/>
+Mean body acceleration time domain jerk signal in the Z direction   </p>
+
+<p><strong>TimeBodyGyro-mean-X</strong><br/>
+Mean body acceleration time domain signal from gyroscope in the X direction   </p>
+
+<p><strong>TimeBodyGyro-mean-Y</strong><br/>
+Mean body acceleration time domain signal from gyroscope in the Y direction   </p>
+
+<p><strong>TimeBodyGyro-mean-Z</strong><br/>
+Mean body acceleration time domain signal from gyroscope in the Z direction   </p>
+
+<p><strong>TimeBodyGyroJerk-mean-X</strong><br/>
+Mean body acceleration time domain jerk signal from gyroscope in the X direction   </p>
+
+<p><strong>TimeBodyGyroJerk-mean-Y</strong><br/>
+Mean body acceleration time domain jerk signal from gyroscope in the Y direction   </p>
+
+<p><strong>TimeBodyGyroJerk-mean-Z</strong><br/>
+Mean body acceleration time domain jerk signal from gyroscope in the Z direction   </p>
+
+<p><strong>TimeBodyAccMag-mean</strong><br/>
+Mean magnitude of body acceleration time domain signal     </p>
+
+<p><strong>TimeGravityAccMag-mean</strong><br/>
+Mean magnitude of gravity acceleration time domain signal     </p>
+
+<p><strong>TimeBodyAccJerkMag-mean</strong><br/>
+Mean magnitude of body acceleration time domain jerk signal     </p>
+
+<p><strong>TimeBodyGyroMag-mean</strong><br/>
+Mean magnitude of body acceleration time domain signal from gyroscope     </p>
+
+<p><strong>TimeBodyGyroJerkMag-mean</strong><br/>
+Mean magnitude of body acceleration time domain signal from gyroscope     </p>
+
+<p><strong>FreqBodyAcc-mean-X</strong><br/>
+Mean body acceleration frequency domain signal in the X direction   </p>
+
+<p><strong>FreqBodyAcc-mean-Y</strong><br/>
+Mean body acceleration frequency domain signal in the Y direction   </p>
+
+<p><strong>FreqBodyAcc-mean-Z</strong><br/>
+Mean body acceleration frequency domain signal in the Z direction   </p>
+
+<p><strong>FreqBodyAccJerk-mean-X</strong><br/>
+Mean body acceleration frequency domain jerk signal in the X direction   </p>
+
+<p><strong>FreqBodyAccJerk-mean-Y</strong><br/>
+Mean body acceleration frequency domain jerk signal in the Y direction   </p>
+
+<p><strong>FreqBodyAccJerk-mean-Z</strong><br/>
+Mean body acceleration frequency domain jerk signal in the Z direction   </p>
+
+<p><strong>FreqBodyGyro-mean-X</strong><br/>
+Mean body acceleration frequency domain signal from gyroscope in the X direction   </p>
+
+<p><strong>FreqBodyGyro-mean-Y</strong><br/>
+Mean body acceleration frequency domain signal from gyroscope in the Y direction   </p>
+
+<p><strong>FreqBodyGyro-mean-Z</strong><br/>
+Mean body acceleration frequency domain signal from gyroscope in the Z direction   </p>
+
+<p><strong>FreqBodyAccMag-mean</strong><br/>
+Mean magnitude of body acceleration frequency domain signal     </p>
+
+<p><strong>FreqBodyAccJerkMag-mean</strong><br/>
+Mean magnitude of body acceleration frequency domain jerk signal     </p>
+
+<p><strong>FreqBodyGyroMag-mean</strong><br/>
+Mean magnitude of body acceleration frequency domain signal from gyroscope      </p>
+
+<p><strong>FreqBodyGyroJerkMag-mean</strong><br/>
+Mean magnitude of body acceleration frequency domain jerk signal from gyroscope     </p>
+
+<p><strong>TimeBodyAcc-std-X</strong><br/>
+Standard deviation of body acceleration time domain signal in the X direction   </p>
+
+<p><strong>TimeBodyAcc-std-Y</strong><br/>
+Standard deviation of body acceleration time domain signal in the Y direction   </p>
+
+<p><strong>TimeBodyAcc-std-Z</strong><br/>
+Standard deviation of body acceleration time domain signal in the Z direction   </p>
+
+<p><strong>TimeGravityAcc-std-X</strong><br/>
+Standard deviation of gravity acceleration time domain signal in the X direction   </p>
+
+<p><strong>TimeGravityAcc-std-Y</strong><br/>
+Standard deviation of gravity acceleration time domain signal in the Y direction   </p>
+
+<p><strong>TimeGravityAcc-std-Z</strong><br/>
+Standard deviation of gravity acceleration time domain signal in the Z direction   </p>
+
+<p><strong>TimeBodyAccJerk-std-X</strong><br/>
+Standard deviation of body acceleration time domain jerk signal in the X direction   </p>
+
+<p><strong>TimeBodyAccJerk-std-Y</strong><br/>
+Standard deviation of body acceleration time domain jerk signal in the Y direction   </p>
+
+<p><strong>TimeBodyAccJerk-std-Z</strong><br/>
+Standard deviation of body acceleration time domain jerk signal in the Z direction   </p>
+
+<p><strong>TimeBodyGyro-std-X</strong><br/>
+Standard deviation of body acceleration time domain signal from gyroscope in the X direction   </p>
+
+<p><strong>TimeBodyGyro-std-Y</strong><br/>
+Standard deviation of body acceleration time domain signal from gyroscope in the Y direction   </p>
+
+<p><strong>TimeBodyGyro-std-Z</strong><br/>
+Standard deviation of body acceleration time domain signal from gyroscope in the Z direction   </p>
+
+<p><strong>TimeBodyGyroJerk-std-X</strong><br/>
+Standard deviation of body acceleration time domain jerk signal from gyroscope in the X direction   </p>
+
+<p><strong>TimeBodyGyroJerk-std-Y</strong><br/>
+Standard deviation of body acceleration time domain jerk signal from gyroscope in the Y direction   </p>
+
+<p><strong>TimeBodyGyroJerk-std-Z</strong><br/>
+Standard deviation of body acceleration time domain jerk signal from gyroscope in the Z direction   </p>
+
+<p><strong>TimeBodyAccMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration time domain signal     </p>
+
+<p><strong>TimeGravityAccMag-std</strong><br/>
+Standard deviation of magnitude of gravity acceleration time domain signal     </p>
+
+<p><strong>TimeBodyAccJerkMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration time domain jerk signal     </p>
+
+<p><strong>TimeBodyGyroMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration time domain signal from gyroscope    </p>
+
+<p><strong>TimeBodyGyroJerkMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration time domain jerk signal from gyroscope    </p>
+
+<p><strong>FreqBodyAcc-std-X</strong><br/>
+Standard deviation of body acceleration frequency domain signal in the X direction   </p>
+
+<p><strong>FreqBodyAcc-std-Y</strong><br/>
+Standard deviation of body acceleration frequency domain signal in the Y direction   </p>
+
+<p><strong>FreqBodyAcc-std-Z</strong><br/>
+Standard deviation of body acceleration frequency domain signal in the Z direction   </p>
+
+<p><strong>FreqBodyAccJerk-std-X</strong><br/>
+Standard deviation of body acceleration frequency domain jerk signal in the X direction   </p>
+
+<p><strong>FreqBodyAccJerk-std-Y</strong><br/>
+Standard deviation of body acceleration frequency domain jerk signal in the Y direction   </p>
+
+<p><strong>FreqBodyAccJerk-std-Z</strong><br/>
+Standard deviation of body acceleration frequency domain jerk signal in the Z direction   </p>
+
+<p><strong>FreqBodyGyro-std-X</strong><br/>
+Standard deviation of body acceleration frequency domain signal from gyroscope in the X direction   </p>
+
+<p><strong>FreqBodyGyro-std-Y</strong><br/>
+Standard deviation of body acceleration frequency domain signal from gyroscope in the Y direction   </p>
+
+<p><strong>FreqBodyGyro-std-Z</strong><br/>
+Standard deviation of body acceleration frequency domain signal from gyroscope in the Z direction   </p>
+
+<p><strong>FreqBodyAccMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration frequency domain signal     </p>
+
+<p><strong>FreqBodyAccJerkMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration frequency domain jerk signal     </p>
+
+<p><strong>FreqBodyGyroMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration frequency domain signal from gyroscope    </p>
+
+<p><strong>FreqBodyGyroJerkMag-std</strong><br/>
+Standard deviation of magnitude of body acceleration frequency domain jerk signal from gyroscope  </p>
+
+</body>
+
+</html>
+
